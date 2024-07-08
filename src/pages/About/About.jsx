@@ -4,7 +4,7 @@ import ContactUs from '../../components/ContactUs/ContactUs'
 const About = () => {
   return (
     <div>
-      <div>Story</div>
+      <div className='h-screen w-full'>Story</div>
      <ContactUs/>
     </div>
   );

@@ -27,13 +27,13 @@ function Events() {
     const eventHighlights = document.querySelector(".events_highlights");
 
     if (window.innerWidth > window.innerHeight) {
-      eventHighlights.style.height= "600px";
+      eventHighlights.style.height = "600px";
       heroSection.style.height = "100vh";
       mainIsland.style.width = "65%";
       trees.forEach((tree) => (tree.style.width = "20%"));
       clouds.forEach((cloud) => (cloud.style.width = "15%"));
     } else {
-      eventHighlights.style.height= "100vh";
+      eventHighlights.style.height = "100vh";
       heroSection.style.height = "75vh";
       mainIsland.style.width = "100%";
       trees.forEach((tree) => (tree.style.width = "30%"));
@@ -192,7 +192,7 @@ function Events() {
                   />
                   {isUpcomingEvent ? (
                     <button className="register_btn">Register Now</button>
-                  ):<div className="no_event_text">Check Out Our Past Events</div>}
+                  ) : <div className="no_event_text">Check Out Our Past Events</div>}
                 </motion.div>
 
                 <motion.div
@@ -250,14 +250,14 @@ function Events() {
                 className="swipe_left"
                 onClick={handleSwipe}
               />
-              <PastEvents/>
+              <PastEvents />
             </div>
           )}
         </div>
       </div>
       <div className="events_highlights_title">Events Highlights</div>
       <div className="events_highlights">
-        <Gallery/>
+        <Gallery />
       </div>
     </div>
   );
