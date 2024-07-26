@@ -13,41 +13,6 @@ import GeneralForm from '../GeneralForm/GeneralForm';
 
 const ContactUs = () => {
   const [isHovered, setIsHovered] = useState(false);
-  // const [isNameClicked, setIsNameClicked] = useState(false);
-  // const [isEmailClicked, setIsEmailClicked] = useState(false);
-  // const [isCompanyClicked, setIsCompanyClicked] = useState(false);
-  // const [isPhoneClicked, setIsPhoneClicked] = useState(false);
-  // const [isMessageClicked, setIsMessageClicked] = useState(false);
-
-
-  // const handleNameClick = () => {
-  //   setIsNameClicked(!isNameClicked);
-  // };
-  // const handleEmailClick = () => {
-  //   setIsEmailClicked(!isEmailClicked);
-  // };
-  // const handleCompanyClick = () => {
-  //   setIsCompanyClicked(!isCompanyClicked);
-  // };
-  // const handlePhoneClick = () => {
-  //   setIsPhoneClicked(!isPhoneClicked);
-  // };
-  // const handleMessageClick = () => {
-  //   setIsMessageClicked(!isMessageClicked);
-  // };
-
-  // const containerVariants = {
-  //   hidden: { opacity: 1, scale: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //     scale: 1,
-  //     transition: {
-  //       delayChildren: 0.3,
-  //       staggerChildren: 0.2
-  //     }
-  //   }
-  // };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 }
@@ -78,15 +43,17 @@ const ContactUs = () => {
     <>
       <section className='light-green-bg flex justify-center items-center flex-col'>
         <div className='h-36 w-full px-10 mt-10 mb-36 '>
-          <h1 className='text-[#254336] text-4xl bg-white'>Brands That Trusted us</h1>
+          <h1 className='text-[#254336] text-2xl font-semibold bg-white'>Brands That Trusted us</h1>
           <ScrollingImages
             direction="left"
+            margin="mt-7"
           />
           <ScrollingImages
             direction="right"
+            margin="mt-4"
           />
         </div>
-        <div className='relative mt-20 border'>
+        <div className='relative mt-10 border'>
           <div className='text-green-200 size font-semibold' >CONTACT</div>
           <div className='text-green-950 text-7xl absolute top-16 left-36 font-semibold '>
             <motion.div
@@ -144,7 +111,7 @@ const ContactUs = () => {
 
               </div>
               <div
-                className=' absolute bg-[#254336] w-3/4 h-90 left-2/3 p-7 flex flex-col gap-10 rounded-xl items-start'>
+                className=' absolute bg-[#254336] w-3/4 h-90 left-2/3 p-7 flex flex-col gap-10 rounded-xl items-start hover:border-[#e6f1e8] hover:border-2'>
                 <FormSponsors />
               </div>
             </motion.div>
