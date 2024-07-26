@@ -27,7 +27,7 @@ function Events() {
     const eventHighlights = document.querySelector(".events_highlights");
 
     if (window.innerWidth > window.innerHeight) {
-      eventHighlights.style.height = "600px";
+      eventHighlights.style.height= "600px";
       heroSection.style.height = "100vh";
       mainIsland.style.width = "65%";
       trees.forEach((tree) => (tree.style.width = "20%"));
@@ -52,7 +52,7 @@ function Events() {
   };
 
   return (
-    <div>
+    <div className="mt-16">
       <div className="hero_section">
         <div className="event_title">Our Events</div>
         <motion.div
@@ -250,14 +250,14 @@ function Events() {
                 className="swipe_left"
                 onClick={handleSwipe}
               />
-              <PastEvents />
+              <PastEvents/>
             </div>
           )}
         </div>
       </div>
       <div className="events_highlights_title">Events Highlights</div>
       <div className="events_highlights">
-        <Gallery />
+        <Gallery/>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const GeneralForm = ()=>{
     const { ref: ref2, inView: inView2 } = useInView({

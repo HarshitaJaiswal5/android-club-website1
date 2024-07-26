@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import { useForm } from 'react-hook-form';
-import { motion } from "framer-motion";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const FormSponsors = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -55,7 +55,6 @@ const FormSponsors = () => {
         <input className=" text-white bg-inherit focus:outline-none  border-b-2 hover:bg-stone-900 rounded-lg placeholder-white  h-7 p-3 focus:border" placeholder='Name' type="text" {...register('firstName', { required: true })} />
         {errors.firstName && <span>This field is required</span>}
       </motion.div>
-
       <div className=' flex gap-20 '>
         <motion.div
           animate={{ y: isCompanyClicked ? -10 : 0 }}
@@ -73,6 +72,7 @@ const FormSponsors = () => {
           {errors.company && <span>This field is required</span>}
         </motion.div>
         <motion.div
+
           animate={{ y: isPhoneClicked ? -10 : 0 }}
           transition={{ duration: 0.5 }}
           onClick={handlePhoneClick}
@@ -89,7 +89,6 @@ const FormSponsors = () => {
           {errors.phoneNumber?.type === 'pattern' && <span>Phone number should be 10 digits</span>}
 
         </motion.div>
-
       </div>
       <motion.div
         animate={{ y: isEmailClicked ? -10 : 0 }}
@@ -106,12 +105,14 @@ const FormSponsors = () => {
         />
         {errors.email && <span>Please enter a valid email address</span>}
       </motion.div>
+
       <motion.div
         animate={{ y: isMessageClicked ? -10 : 0 }}
         transition={{ duration: 0.5 }}
         onClick={handleMessageClick}
         variants={itemVariants}
-        className='w-full'
+        className='w-full h-32'
+        // initial="hidden"
       >
         <textarea
           className="text-white bg-inherit focus:outline-none border-b-2 hover:bg-stone-900 rounded-lg placeholder-white w-full p-3 focus:border"
